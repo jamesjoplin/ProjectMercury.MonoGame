@@ -13,7 +13,7 @@
     <AssemblyName>ProjectMercury.EffectEditor</AssemblyName>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>  
+    <FileAlignment>512</FileAlignment>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -179,9 +179,6 @@
     <Compile Include="UserInterface.designer.cs">
       <DependentUpon>UserInterface.cs</DependentUpon>
     </Compile>
-    <None Include="Trace.log">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjectMercury.Design\ProjectMercury.Design.csproj">
