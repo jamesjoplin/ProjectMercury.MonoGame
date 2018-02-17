@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EditorPluginProjects", "EditorPluginProjects", "{1149EF74-FB04-4FA7-AD06-6CB0DC205C04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.Windows", "ProjectMercury.Windows\ProjectMercury.Windows.csproj", "{1E3FDDBD-A15F-42CF-A83E-754476079B30}"
@@ -8,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.Design", "ProjectMercury.Design\ProjectMercury.Design.csproj", "{87B7CA30-F7DE-41EE-BA60-4337DFEE1735}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.EffectEditor", "ProjectMercury.EffectEditor\ProjectMercury.EffectEditor.csproj", "{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC} = {1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.EffectEditor.DefaultPluginLibrary", "ProjectMercury.EffectEditor.DefaultPluginLibrary\ProjectMercury.EffectEditor.DefaultPluginLibrary.csproj", "{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}"
 EndProject
@@ -46,8 +51,8 @@ Global
 		{87B7CA30-F7DE-41EE-BA60-4337DFEE1735}.Release|x86.Build.0 = Release|x86
 		{87B7CA30-F7DE-41EE-BA60-4337DFEE1735}.Release|Xbox 360.ActiveCfg = Release|x86
 		{87B7CA30-F7DE-41EE-BA60-4337DFEE1735}.Release|Xbox 360.Build.0 = Release|x86
-		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Debug|x86.Build.0 = Debug|Any CPU
+		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Debug|x86.ActiveCfg = Debug|x86
+		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Debug|x86.Build.0 = Debug|x86
 		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Debug|Xbox 360.ActiveCfg = Debug|Any CPU
 		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Debug|Xbox 360.Build.0 = Debug|Any CPU
 		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Reference|x86.ActiveCfg = Release|Any CPU
@@ -58,8 +63,8 @@ Global
 		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Release|x86.Build.0 = Release|Any CPU
 		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Release|Xbox 360.ActiveCfg = Release|Any CPU
 		{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}.Release|Xbox 360.Build.0 = Release|Any CPU
-		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Debug|x86.ActiveCfg = Debug|x86
+		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Debug|x86.Build.0 = Debug|x86
 		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Debug|Xbox 360.ActiveCfg = Debug|Any CPU
 		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Debug|Xbox 360.Build.0 = Debug|Any CPU
 		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}.Reference|x86.ActiveCfg = Release|Any CPU
@@ -82,8 +87,8 @@ Global
 		{5B60FB65-704B-4D28-9117-AF0B25220484}.Release|x86.Build.0 = Release|x86
 		{5B60FB65-704B-4D28-9117-AF0B25220484}.Release|Xbox 360.ActiveCfg = Release|x86
 		{5B60FB65-704B-4D28-9117-AF0B25220484}.Release|Xbox 360.Build.0 = Release|x86
-		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Debug|x86.Build.0 = Debug|Any CPU
+		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Debug|x86.ActiveCfg = Debug|x86
+		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Debug|x86.Build.0 = Debug|x86
 		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Debug|Xbox 360.ActiveCfg = Debug|Any CPU
 		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Reference|x86.ActiveCfg = Release|Any CPU
 		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029}.Reference|Xbox 360.ActiveCfg = Release|Any CPU
@@ -97,5 +102,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC} = {1149EF74-FB04-4FA7-AD06-6CB0DC205C04}
 		{657CDBDC-F36A-4495-A7F5-D28FBF0A2029} = {1149EF74-FB04-4FA7-AD06-6CB0DC205C04}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DEA319E-BCCA-418D-A533-2EBAC724F250}
 	EndGlobalSection
 EndGlobal
