@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Project Mercury Effect Editor" Language="1033" Version="0.1.0.0" Manufacturer="Project Mercury Team" UpgradeCode="0c45b404-02d3-478c-a377-7e550dc9c6a4">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Property Id="ARPNOMODIFY" Value="yes" Secure="yes" />
+
+		<Feature Id="ProductFeature" Title="EffectEditorSetup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="EffectLibraryComponents" />
+      <ComponentGroupRef Id="PluginComponents" />
+      <ComponentGroupRef Id="ReferenceComponents" />
+      <ComponentGroupRef Id="TextureComponents" />
+      <ComponentGroupRef Id="ShortcutComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="ProjectMercury.EffectEditor">
+          <Directory Id="EffectLibraryFolder" Name="EffectLibrary" />
+          <Directory Id="PluginsFolder" Name="Plugins" />
+          <Directory Id="ReferenceFolder" Name="Reference" />
+          <Directory Id="TexturesFolder" Name="Textures" />
+        </Directory>
+			</Directory>
+      <!-- Start Menu Folder -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Project Mercury" />
+      </Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <Component Id="ProductComponent" Guid="C8E3EBA3-85AA-48B9-9820-C1B3DB96CF57">
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetPath)" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/About.htm" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/AssimpNet.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ATI.TextureConverter.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/CppNet.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/FreeImageNET.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/MonoGame.Framework.Content.Pipeline.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/MonoGame.Framework.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Nvidia.TextureTools.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.Design.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.Design.pdb" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.dll" />        
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.EffectEditor.exe.config" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.EffectEditor.pdb" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.EffectEditor.PluginInterfaces.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.EffectEditor.PluginInterfaces.pdb" />        
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/ProjectMercury.pdb" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/PVRTexLibNET.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.D3DCompiler.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.Direct2D1.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.Direct3D11.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.DXGI.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.MediaFoundation.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.XAudio2.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpDX.XInput.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/SharpFont.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.ProjectDir)/Trace.log">
+          <Permission FileAllRights="yes" User="Users" />
+        </File>
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Trinet.Core.IO.Ntfs.dll" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="EffectLibraryComponents" Directory="EffectLibraryFolder">
+      <Component Id="EffectsLibraryComponent" Guid="D58BCEB2-4C62-4A34-8C13-6C68EA8593A9">
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/BasicExplosion.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/BasicFireball.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/BasicSmokePlume.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/BeamMeUp.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/CampFire.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/FlowerBloom.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/MagicTrail.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/Paparazzi.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/SimpleRain.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/StarTrail.xml" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/EffectLibrary/WaterJet.xml" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="PluginComponents" Directory="PluginsFolder">
+      <Component Id="PluginComponent" Guid="0E96C066-34AC-4738-84BB-37445A8B2B90">
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Plugins/ProjectMercury.ContentPipeline.dll" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Plugins/ProjectMercury.EffectEditor.DefaultPluginLibrary.dll" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ReferenceComponents" Directory="ReferenceFolder">
+      <Component Id="ReferenceComponent" Guid="3DA15CA2-C61B-439F-80E9-5F880543983D">
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Reference/Documentation.chm" />        
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="TextureComponents" Directory="TexturesFolder">
+      <Component Id="TextureComponent" Guid="2A696963-F43B-4B83-A4BD-7521B55410AF">
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Beam.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/BeamBlurred.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Cloud001.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Cloud002.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Cloud003.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Cloud004.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Flame.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/FlowerBurst.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Laser.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/LensFlare.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/License.txt" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/MultiDot.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle001.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle002.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle003.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle004.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle005.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle006.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Particle007.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Ring001.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Ring002.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/SoftClumpy.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/SoftSmokey.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Spikey001.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Spikey002.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Splash.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Spray001.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Star.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Water001.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Water002.png" />
+        <File Source="$(var.ProjectMercury.EffectEditor.TargetDir)/Textures/Weeds.png" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ShortcutComponents">
+      <Component Id="ApplicationShortcut" Directory="ApplicationProgramsFolder">
+        <Shortcut Id="AppStartMenuShortcut" Name="ProjectMercury Effect Editor" Description="ProjectMercury Effect Editor" Target="[#ProjectMercury.EffectEditor.exe]" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\ProjectMercury\EffectEditor" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+	</Fragment>
+</Wix>
