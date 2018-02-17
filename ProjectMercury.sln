@@ -1,18 +1,17 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.EffectEditor", "ProjectMercury.EffectEditor\ProjectMercury.EffectEditor.csproj", "{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC} = {1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EditorPluginProjects", "EditorPluginProjects", "{1149EF74-FB04-4FA7-AD06-6CB0DC205C04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.Windows", "ProjectMercury.Windows\ProjectMercury.Windows.csproj", "{1E3FDDBD-A15F-42CF-A83E-754476079B30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.Design", "ProjectMercury.Design\ProjectMercury.Design.csproj", "{87B7CA30-F7DE-41EE-BA60-4337DFEE1735}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.EffectEditor", "ProjectMercury.EffectEditor\ProjectMercury.EffectEditor.csproj", "{D1D35C3C-FD2A-41D0-935D-8BF1DB87C6F3}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC} = {1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMercury.EffectEditor.DefaultPluginLibrary", "ProjectMercury.EffectEditor.DefaultPluginLibrary\ProjectMercury.EffectEditor.DefaultPluginLibrary.csproj", "{1DA69486-E7D0-46EF-A8A7-74E3CDFFB3FC}"
 EndProject
